@@ -48,13 +48,12 @@ We compare three paradigms:
 * **Action (a):** {0: Deny Loan, 1: Approve Loan}
 * **Reward Function:**
 
-  ```math
-  R(s, a) = {
-  +Profit_{Total}, \text{ if Approve & Paid } \\
-  -Principal, \text{ if Approve & Defaulted } \\
-  0, \text{ if Deny }
-  }
-  ```
+  
+R(s, a) = {
++Profit_{Total}, \text{ if Approve & Paid } \\
+-Principal, \text{ if Approve & Defaulted } \\
+0, \text{ if Deny }
+}
 
 ---
 
