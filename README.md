@@ -48,12 +48,10 @@ Financial institutions often rely on classification-based credit models that opt
 * **Action (a):** {0: Deny Loan, 1: Approve Loan}
 * **Reward (r):**
 
-  ```math
-  R(s, a) =
-  { +Profit_Total, if Approve & Paid
-  -Principal, if Approve & Defaulted
-  0, if Deny }
-  ```
+R(s, a) =
+{ +Profit_Total, if Approve & Paid
+-Principal, if Approve & Defaulted
+0, if Deny }
 
 ---
 
