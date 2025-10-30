@@ -55,14 +55,23 @@ R(s, a) =
 
 ---
 
-## 📈 Results Summary
+🧩 Policy Comparison Table
+Metric	Supervised MLP (DL)	BC (Imitation)	CQL (Profit Max)
+Est. Policy Value (FQE)	$1,399.88	$1,928.09	$2,776.13
+Improvement over Baseline	−27.4%	0.0%	+44.0%
+AUC-ROC (Test Set)	0.6922	0.5291	0.5049
+F1 Score (Test Set)	0.5248	0.4475	0.4206
+Precision (Approval Quality)	0.4035	0.3127	0.2783
+Recall (Default Avoidance)	0.7506	0.7861	0.8614
+🔍 Interpretation
 
-| Policy               | Objective          | F1 Score | Est. Policy Value (FQE) | % Gain vs Baseline |
-| :------------------- | :----------------- | :------: | :---------------------: | :----------------: |
-| **CQL (Profit Max)** | Maximize E[Profit] |    N/A   |      **$2,776.13**      |     **+44.0%**     |
-| **BC (Imitation)**   | Emulate πβ         |    N/A   |        $1,928.09        |        0.0%        |
-| **MLP (Supervised)** | Maximize F1        |   0.52   |        $1,399.88        |       −27.4%       |
+CQL (Profit Max) delivers the highest expected profit (+44%) despite lower AUC and F1 metrics.
 
+MLP (Supervised) performs best in traditional classification terms but fails to optimize for business profit.
+
+BC (Imitation) simply reproduces historical behavior and serves as the baseline for comparison.
+
+These results reinforce the insight that financial decision-making should optimize for value, not just accuracy.
 ### Key Insights
 
 * **Accuracy ≠ Profitability:** Models that optimized F1 underperformed in profit.
